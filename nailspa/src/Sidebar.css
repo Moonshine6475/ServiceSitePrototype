@@ -3,7 +3,7 @@
 .sidebar-menu {
   position: absolute; /* position relative to .app-layout */
   top: 0;
-  right: -380px; /* Hidden off the right edge of the app-layout by default */
+  right: -1000px; /* Hidden off the right edge of the app-layout by default */
   width: 260px;
   height: 100%;
   background-color: #ffffff;
