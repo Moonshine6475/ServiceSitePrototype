@@ -1,14 +1,14 @@
 import React from 'react';
 import './ContactPage.css';
 import logo from './assets/nailpolishicon.png';
-  
+
 
 const ContactPage = ({ toggleMenu, onHome }) => {
   return (
     <div className="mobile-container contact-page">
       <header className="app-header">
         <div className="logo-container" onClick={onHome} role="button" tabIndex={0}>
-          <div className="logo-icon"></div>
+          <img src={logo} alt="NailSpa Logo" className="logo-image" />
         </div>
         <div className="name-logo">NailSpa</div>
         <div className="hamburger-menu" onClick={toggleMenu} role="button" tabIndex={0}>

@@ -34,9 +34,7 @@ const ArtistsPage = ({ toggleMenu, onNext }) => {
       {/* Header */}
       <header className="app-header">
         <div className="logo-container" onClick={() => onNext('home')}>
-          <div className="logo-icon">
-            <img src={logo} alt="NailSpa Logo" />
-          </div>
+          <img src={logo} alt="NailSpa Logo" className="logo-image" />
         </div>
         <div className="name-logo">NailSpa</div>
         <div className="hamburger-menu" onClick={toggleMenu}>

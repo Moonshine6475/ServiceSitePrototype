@@ -9,9 +9,7 @@ const ThankYouPage = ({ onHome, service, date, time, artist, toggleMenu }) => {
       {/* Header */}
       <header className="app-header">
         <div className="logo-container" onClick={() => onHome()}>
-          <div className="logo-icon">
-            <img src={logo} alt="NailSpa Logo" />
-          </div>
+          <img src={logo} alt="NailSpa Logo" className="logo-image" />
         </div>
         <div className="hamburger-menu" onClick={toggleMenu}>
           <span></span>
