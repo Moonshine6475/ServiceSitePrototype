@@ -1,0 +1,114 @@
+/* Artists Page Styles */
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+.artists-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 30px 20px;
+  font-family: 'Oxygen', sans-serif;
+  flex-grow: 1;
+  background-color: #cbffe2;
+}
+
+.artist-card {
+  background-color: #ffffff;
+  border: 3px solid #333333;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.artist-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.15);
+}
+
+.artist-image-placeholder {
+  width: 140px;
+  height: 140px;
+  border: 2px solid #333333;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.artist-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.artist-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 12px;
+  text-align: center;
+}
+
+.artist-about {
+  font-size: 0.95rem;
+  color: #555555;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0 0 16px;
+  flex-grow: 1;
+}
+
+.artist-gallery-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: lowercase;
+  background-color: #bbfdff;
+  border: 2px solid #333333;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #333333;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.artist-gallery-btn:hover {
+  background-color: #9ff5ff;
+}
+
+.artist-gallery-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px #333333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .artists-container {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .artists-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px 15px;
+  }
+
+  .artist-card {
+    padding: 16px;
+  }
+
+  .artist-name {
+    font-size: 1.4rem;
+  }
+}

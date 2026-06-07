@@ -1,0 +1,191 @@
+/* Gallery Carousel Styles */
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 30px 20px;
+  background-color: #ecdcff;
+  gap: 20px;
+}
+
+.gallery-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333333;
+  margin: 0;
+  text-align: center;
+}
+
+/* Artist Carousel Header (All Artists Mode) */
+.artist-carousel-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.current-artist-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333333;
+  margin: 0;
+  min-width: 140px;
+  text-align: center;
+}
+
+/* Image Carousel */
+.image-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.carousel-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.carousel-image-placeholder {
+  height: 240px;
+  width: 100%;
+  max-width: 420px;
+  border: 3px solid #333333;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ffd6be, #dbf3ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Ensure the image fills the placeholder (height-first) and crops cleanly */
+.carousel-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 4px;
+}
+.image-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333333;
+  margin: 0;
+  text-align: center;
+}
+
+/* Navigation Buttons */
+.carousel-nav-btn {
+  background-color: #ffffff;
+  border: 2px solid #333333;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.2rem;
+  box-shadow: 2px 2px 0px #333333;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.carousel-nav-btn:hover {
+  transform: translate(-1px, -1px);
+}
+
+.carousel-nav-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px #333333;
+}
+
+.carousel-nav-btn.prev,
+.carousel-nav-btn.next {
+  padding: 6px 10px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-nav-btn.large {
+  padding: 12px;
+  width: 50px;
+  height: 50px;
+  font-size: 1.8rem;
+}
+
+/* Counter */
+.carousel-counter {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #666666;
+  text-align: center;
+}
+
+/* Dots Indicator */
+.carousel-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #333333;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dot.active {
+  background-color: #333333;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .gallery-container {
+    padding: 20px 16px;
+    gap: 16px;
+  }
+
+  .current-artist-name {
+    font-size: 1.4rem;
+  }
+
+  .carousel-image-placeholder {
+    width: 200px;
+    height: 200px;
+    font-size: 3rem;
+  }
+
+  .carousel-nav-btn.large {
+    padding: 8px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.6rem;
+  }
+
+  .image-carousel {
+    gap: 12px;
+  }
+}
