@@ -1,6 +1,7 @@
 import React from 'react';
 import './BookingFlow.css';
 import nailsalonImg from './assets/nailsalon.jpg';
+import logo from './assets/nailpolishicon.png';
 
 const ThankYouPage = ({ onHome, service, date, time, artist, toggleMenu }) => {
   return (
@@ -8,7 +9,9 @@ const ThankYouPage = ({ onHome, service, date, time, artist, toggleMenu }) => {
       {/* Header */}
       <header className="app-header">
         <div className="logo-container" onClick={() => onHome()}>
-          <div className="logo-icon"></div>
+          <div className="logo-icon">
+            <img src={logo} alt="NailSpa Logo" />
+          </div>
         </div>
         <div className="hamburger-menu" onClick={toggleMenu}>
           <span></span>

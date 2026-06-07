@@ -1,5 +1,6 @@
 import React from 'react';
 import './BookingFlow.css';
+import logo from './assets/nailpolishicon.png';
 
 const ServicesPage = ({ toggleMenu, onNext }) => {
   const services = ['Manicure', 'Pedicure', 'Extensions', 'Nail Art'];
@@ -8,7 +9,11 @@ const ServicesPage = ({ toggleMenu, onNext }) => {
     <div className="mobile-container booking-flow">
       {/* Header */}
       <header className="app-header">
-        <div className="logo-container"onClick={() => onNext('home')}><div className="logo-icon" ></div></div>
+        <div className="logo-container" onClick={() => onNext('home')}>
+          <div className="logo-icon">
+            <img src={logo} alt="NailSpa Logo" />
+          </div>
+        </div>
         <div className= "name-logo">NailSpa</div>
         <div className="hamburger-menu" onClick={toggleMenu}>
           <span></span>

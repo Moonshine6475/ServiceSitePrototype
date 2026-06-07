@@ -1,5 +1,7 @@
 import React from 'react';
 import './ContactPage.css';
+import logo from './assets/nailpolishicon.png';
+  
 
 const ContactPage = ({ toggleMenu, onHome }) => {
   return (

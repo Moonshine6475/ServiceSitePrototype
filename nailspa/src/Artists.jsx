@@ -4,6 +4,7 @@ import './Artists.css';
 import avaImg from './assets/person1.jpg';
 import miaImg from './assets/person2.webp';
 import noorImg from './assets/person3.webp';
+import logo from './assets/nailpolishicon.png';
 
 
 const ArtistsPage = ({ toggleMenu, onNext }) => {
@@ -33,7 +34,9 @@ const ArtistsPage = ({ toggleMenu, onNext }) => {
       {/* Header */}
       <header className="app-header">
         <div className="logo-container" onClick={() => onNext('home')}>
-          <div className="logo-icon"></div>
+          <div className="logo-icon">
+            <img src={logo} alt="NailSpa Logo" />
+          </div>
         </div>
         <div className="name-logo">NailSpa</div>
         <div className="hamburger-menu" onClick={toggleMenu}>

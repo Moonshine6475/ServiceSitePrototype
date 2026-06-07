@@ -16,6 +16,8 @@ import oil from './assets/oil.jpg';
 import summer from './assets/summer.webp';
 import ballet from './assets/ballet.webp';
 import cute from './assets/cute.webp';
+import logo from './assets/nailpolishicon.png';
+  
 const GalleryPage = ({ toggleMenu, artist, onHome }) => {
   const artistGalleries = {
     Ava: [
@@ -77,7 +79,9 @@ const GalleryPage = ({ toggleMenu, artist, onHome }) => {
       {/* Header */}
       <header className="app-header">
         <div className="logo-container" onClick={onHome}>
-          <div className="logo-icon"></div>
+          <div className="logo-icon">
+            <img src={logo} alt="NailSpa Logo" />
+          </div>
         </div>
         <div className="name-logo">NailSpa</div>
         <div className="hamburger-menu" onClick={toggleMenu}>
